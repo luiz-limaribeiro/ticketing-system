@@ -1,0 +1,41 @@
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+h1 {
+  margin-bottom: 1em;
+}
+
+input,
+select,
+textarea {
+  border: 2px solid black;
+  border-radius: 6px;
+  background-color: transparent;
+  color: black;
+  padding-left: 8px;
+  min-height: 2em;
+  outline: none;
+  line-height: 2em;
+  min-height: 2em;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+select,
+select:focus {
+  appearance: none;
+  color: #0008;
+}
+
+textarea {
+  min-height: 4em;
+  line-height: 1.2em;
+}
+
+button {
+  background-color: lightgreen;
+  margin-top: .8em;
+}
