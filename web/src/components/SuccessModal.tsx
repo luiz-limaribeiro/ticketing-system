@@ -1,13 +1,20 @@
-import './styles/SuccessModal.css'
+import "./styles/SuccessModal.css";
 
-export default function SuccessModal() {
+interface Props {
+  onOk: () => void;
+}
+
+export default function SuccessModal({ onOk }: Props) {
   return (
-    <div>
-      <div>success</div>
-      <span>Success!</span>
-      <span>Your ticket has been submitted</span>
-      <span>Ticket ID: ...</span>
-      <p>An email has been sent...</p>
+    <div className="success-modal">
+      <h1>Ticket created</h1>
+      <strong>Ticket ID: ...</strong>
+      <p>We've sent a confirmation email with your ticket details.</p>
+      <p>
+        Our team will review your request and get back to you as soon as
+        possible!
+      </p>
+      <button onClick={onOk}>Ok</button>
     </div>
-  )
+  );
 }

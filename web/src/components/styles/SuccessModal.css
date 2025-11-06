@@ -1,0 +1,17 @@
+.success-modal {
+  display: flex;
+  flex-direction: column;
+  max-width: 320px;
+  padding: 0 2em;
+  gap: .8em;
+}
+
+h1 {
+  margin-bottom: .8em;
+}
+
+button {
+  margin-top: 1em;
+  width: 199.77px;
+  align-self: center;
+}
