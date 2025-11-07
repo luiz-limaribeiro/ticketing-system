@@ -1,9 +1,9 @@
-import LoginScreen from './components/LoginScreen'
+import SupportScreen from './components/SupportScreen'
 import './App.css'
 
 function App() {
   return (
-    <LoginScreen />
+    <SupportScreen />
   )
 }
 

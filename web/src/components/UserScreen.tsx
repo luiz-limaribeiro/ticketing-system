@@ -1,5 +1,4 @@
 import { useRef, useState, type FormEvent } from "react";
-import "./styles/UserScreen.css";
 import SuccessModal from "./SuccessModal";
 
 export default function UserScreen() {

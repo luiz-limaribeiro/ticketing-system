@@ -1,5 +1,4 @@
 import type { FormEvent } from "react";
-import "./styles/LoginScreen.css";
 
 export default function LoginScreen() {
   async function handleSubmit(e: FormEvent) {
