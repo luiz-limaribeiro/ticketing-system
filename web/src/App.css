@@ -4,3 +4,44 @@
   padding: 2rem;
   text-align: center;
 }
+
+h1 {
+  margin-bottom: 1em;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+input,
+select,
+textarea {
+  border: 2px solid black;
+  border-radius: 6px;
+  background-color: transparent;
+  color: black;
+  padding-left: 8px;
+  min-height: 2em;
+  line-height: 2em;
+  outline: none;
+  font-family: inherit;
+  font-size: inherit;
+}
+
+textarea {
+  min-height: 4em;
+  line-height: 1.2em;
+}
+
+select,
+select:focus {
+  appearance: none;
+  color: #0008;
+}
+
+button {
+  background-color: lightgreen;
+  margin-top: 0.8em;
+}
