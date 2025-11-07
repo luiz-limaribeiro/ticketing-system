@@ -1,4 +1,4 @@
-import { useState, type FormEvent } from "react";
+import { useRef, useState, type FormEvent } from "react";
 import "./styles/UserScreen.css";
 import SuccessModal from "./SuccessModal";
 
@@ -9,19 +9,38 @@ export default function UserScreen() {
   const [description, setDescription] = useState("");
   const [submitted, setSubmitted] = useState(false);
 
-  function handleSubmit(e: FormEvent) {
+  const ticketId = useRef("...");
+
+  async function handleSubmit(e: FormEvent) {
     e.preventDefault();
 
-    // axios
-    setSubmitted(true);
+    const newTicket = { username: name, email, category, description };
+
+    await fetch("/api/tickets", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(newTicket),
+    })
+      .then((res) => {
+        if (!res.ok) throw new Error("Failed to create ticket");
+        return res.json();
+      })
+      .then((data) => {
+        console.log("Ticket created:", data);
+        ticketId.current = data.id;
+        setSubmitted(true);
+      })
+      .catch((err) => console.error(err));
   }
 
   function resetState() {
-    setName("")
-    setEmail("")
-    setCategory("")
-    setDescription("")
-    setSubmitted(false)
+    setName("");
+    setEmail("");
+    setCategory("");
+    setDescription("");
+    setSubmitted(false);
   }
 
   return (
@@ -67,7 +86,7 @@ export default function UserScreen() {
           </form>
         </div>
       ) : (
-        <SuccessModal onOk={() => resetState()} />
+        <SuccessModal id={ticketId.current} onOk={() => resetState()} />
       )}
     </main>
   );

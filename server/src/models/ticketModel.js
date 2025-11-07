@@ -2,11 +2,13 @@ import { openDb } from "../config/db.js";
 
 export async function createTicket(username, email, category, description) {
   const db = await openDb();
+  const newId = Math.floor(1_000_000_000 + Math.random() * 9_000_000_000)
+
   const result = await db.run(
-    'INSERT INTO tickets VALUES (?, ?, ?, ?)',
-    [username, email, category, description]
+    'INSERT INTO tickets (id, username, email, category, description) VALUES (?, ?, ?, ?, ?)',
+    [newId, username, email, category, description]
   );
-  return { id: result.lastID, username, email, category, description, status: 'open' };
+  return { id: result.lastID, username, email, category, description };
 }
 
 export async function listTickets() {

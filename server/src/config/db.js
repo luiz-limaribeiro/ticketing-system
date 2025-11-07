@@ -13,9 +13,10 @@ export async function initDb() {
 
   await db.exec(`
     CREATE TABLE IF NOT EXISTS tickets (
-      id INTEGER PRIMARY KEY AUTOINCREMENT,
+      id INTEGER PRIMARY KEY,
       username TEXT NOT NULL,
       email TEXT NOT NULL,
+      category TEXT NOT NULL,
       description TEXT NOT NULL,
       status TEXT DEFAULT 'open',
       created_at DATETIME DEFAULT CURRENT_TIMESTAMP
