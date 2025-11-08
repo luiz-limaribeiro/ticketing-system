@@ -29,3 +29,7 @@ p {
   overflow-x: hidden;
   text-overflow: ellipsis;
 }
+
+div {
+  text-align: center;
+}

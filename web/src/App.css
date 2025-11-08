@@ -5,13 +5,14 @@
   text-align: center;
 }
 
-h1 {
+h1, h2 {
   margin-bottom: 1em;
 }
 
 form {
   display: flex;
   flex-direction: column;
+  justify-self: center;
   gap: 8px;
 }
 
@@ -43,5 +44,5 @@ select:focus {
 
 button {
   background-color: lightgreen;
-  margin-top: 0.8em;
+  margin-top: 0.4em;
 }

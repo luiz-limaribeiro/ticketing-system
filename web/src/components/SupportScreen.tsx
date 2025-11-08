@@ -45,7 +45,9 @@ export default function SupportScreen() {
         </ol>
       )}
       {!fetching && tickets.current.length === 0 && (
-        <span>There are no open tickets for now</span>
+        <div>
+          <span>There's no open tickets for now</span>
+        </div>
       )}
     </main>
   );

@@ -1,0 +1,23 @@
+form {
+  position: relative;
+}
+
+.label {
+  text-align: end;
+  position: absolute;
+  top: -24px;
+  right: 0;
+  color: lightcoral;
+}
+
+.ticket-details {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 2em;
+}
+
+.ok {
+  width: 200px;
+  align-self: center;
+  margin-top: 1em;
+}

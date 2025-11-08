@@ -1,9 +1,9 @@
-import SupportScreen from './components/SupportScreen'
+import StatusScreen from './components/StatusScreen'
 import './App.css'
 
 function App() {
   return (
-    <SupportScreen />
+    <StatusScreen />
   )
 }
 
