@@ -1,9 +1,9 @@
-import StatusScreen from './components/StatusScreen'
 import './App.css'
+import TicketDetails from './components/TicketDetails'
 
 function App() {
   return (
-    <StatusScreen />
+    <TicketDetails />
   )
 }
 

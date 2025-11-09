@@ -1,0 +1,10 @@
+.details {
+  display: flex;
+  flex-direction: column;
+  text-align: start;
+  padding-left: 1em;
+}
+
+button {
+  
+}
